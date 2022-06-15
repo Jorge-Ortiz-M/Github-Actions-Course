@@ -1,0 +1,29 @@
+name: Jorge
+age: 23
+address: "Street: My street"
+active: true
+school:
+  name: School name
+  address: 1999
+  object:
+    value: This belong to object
+    exists: true
+jsonObject: {key: newValue, key2: newValue2}
+number:
+  - item1
+  - itme2
+  - 25
+  - true
+  - { key: value }
+jsonArray: [100, 200]
+objectArray:
+  - key: myValue
+    key3: otherValue
+  - key2: newValue
+    key4: myKey5
+longText1: > 
+  kdflsdfsdfds fsdfsdflkdsf 
+  dsfskjfsdf dsfdsfjsdf sdfsdf
+longText: | 
+  kdflsdfsdfds fsdfsdflkdsf 
+  dsfskjfsdf dsfdsfjsdf sdfsdf
