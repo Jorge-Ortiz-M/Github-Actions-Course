@@ -9,7 +9,16 @@ jobs:
       - name: List files
         run: |
           pwd
-          ls
+          ls -a
+
+      - name: Cloning our repository
+        id: clonerepo
+        uses: actions/checkout@v1
+
+      - name: List files Again Dude
+        run: |
+          pwd
+          ls -a
 
       - name: Javascript action.
         id: jsaction
