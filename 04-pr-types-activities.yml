@@ -1,0 +1,14 @@
+name: Pull Request When Closed.
+
+on: 
+  pull_request:
+    types: [closed]
+
+jobs:
+  job-trigger-when-pr-closed:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Closing first message.
+      run: echo "Hey!"
+    - name: Closing last message.
+      run: echo "You have closed the pull request."
