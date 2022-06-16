@@ -20,8 +20,11 @@ jobs:
           print(platform.processor())
         shell: python
 
-      - name: Ruby commands
-        run: |
-          puts "Hello World"
-          puts 3*10
-        shell: ruby
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
