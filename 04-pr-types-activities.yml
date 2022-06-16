@@ -2,7 +2,7 @@ name: Pull Request When Closed.
 
 on: 
   pull_request:
-    types: [closed]
+    types: [closed, assigned]
 
 jobs:
   job-trigger-when-pr-closed:
