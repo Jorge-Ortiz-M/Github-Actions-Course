@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Closing first message.
-      run: echo "Hey!"
-    - name: Closing last message.
-      run: echo "You have closed the pull request."
+      run: | 
+        echo "Hey!"
+        echo "You have closed the pull request."
