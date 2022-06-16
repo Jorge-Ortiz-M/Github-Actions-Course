@@ -12,3 +12,4 @@ jobs:
       run: | 
         echo "Hey!"
         echo "You have closed the pull request."
+        echo "It should be working."
