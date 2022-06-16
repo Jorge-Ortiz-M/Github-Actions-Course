@@ -6,16 +6,22 @@ jobs:
   run-shell-command: 
     runs-on: ubuntu-latest
     steps:
-      - name: echo a string
+      - name: echo a string  # <--- Step's name.
         run: echo "Hello World"
-      - name: multiline script
+      - name: multiline script  # <--- Step's name.
         run: |
           node -v
           npm -v
           ruby -v
       
-      - name: phyton Command
+      - name: phyton Command  # <--- Step's name.
         run: |
           import platform
           print(platform.processor())
         shell: python
+
+      - name: Ruby commands
+        run: |
+          puts "Hello World"
+          puts 3*10
+        shell: ruby
