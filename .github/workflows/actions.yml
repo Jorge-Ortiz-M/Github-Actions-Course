@@ -11,6 +11,13 @@ jobs:
           pwd
           ls -a
 
+      - name: Printing enviroment variables
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+
       - name: Cloning our repository
         id: clonerepo
         uses: actions/checkout@v1
