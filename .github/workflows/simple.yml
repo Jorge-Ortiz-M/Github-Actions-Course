@@ -3,25 +3,26 @@ name: Shell Commands
 on: [push]
 
 jobs: 
-  run-shell-command: 
-    runs-on: ubuntu-latest
+  run-shell-command:  # <--- Job's name.
+    runs-on: ubuntu-latest  # <--- Operating System.
     steps:
       - name: echo a string  # <--- Step's name.
-        run: echo "Hello World"
+        run: echo "Hello World"  # <--- Action
       - name: multiline script  # <--- Step's name.
-        run: |
+        run: |  # <--- Action
           node -v
           npm -v
           ruby -v
       
       - name: phyton Command  # <--- Step's name.
-        run: |
+        run: |  # <--- Action
           import platform
           print(platform.processor())
         shell: python
 
-  run-windows-commands:
-    runs-on: windows-latest
+  run-windows-commands:  # <--- Job's name.
+    runs-on: windows-latest  # <--- Operating System.
+    needs: ["run-shell-command"]
     steps:
       - name: Directory Powershell
         run: Get-Location
