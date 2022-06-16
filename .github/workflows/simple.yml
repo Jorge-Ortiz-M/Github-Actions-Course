@@ -22,10 +22,20 @@ jobs:
 
   run-windows-commands:  # <--- Job's name.
     runs-on: windows-latest  # <--- Operating System.
-    needs: ["run-shell-command"]
+    needs: ["run-shell-command"]  # <--- This job depends on the other job.
     steps:
-      - name: Directory Powershell
-        run: Get-Location
-      - name: Directory Bash
-        run: pwd
+      - name: Directory Powershell  # <--- Step's name.
+        run: Get-Location  # <--- Action
+      - name: Directory Bash  # <--- Step's name.
+        run: pwd  # <--- Action
         shell: bash
+
+  run-other-windows:
+    runs-on: windows-latest
+    needs: ["run-windows-commands"]
+    steps:
+      - name: Showing directories
+        run: dir
+      - name: Show location
+        run: pwd
+        
