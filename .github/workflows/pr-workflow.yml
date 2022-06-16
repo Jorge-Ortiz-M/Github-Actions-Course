@@ -1,0 +1,12 @@
+name: Pull Request Workflow
+
+on: [pull_request]
+
+jobs:
+  action-with-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: activate-when-pr
+        run: |
+          echo "Hello"
+          echo "I was activated with a pr"
